@@ -40,6 +40,84 @@ class CarDetailScreen extends StatelessWidget {
                           height: 15,
                           color: Colors.white70,
                         ),
+                        Row(
+                          children: [
+                            Image.asset(
+                              "assets/images/driver.jpg",
+                              width: 100,
+                            ),
+                            SizedBox(width: 15),
+                            Expanded(
+                                child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Text(
+                                          'Sithsara Nayana',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 18),
+                                        ),
+                                        Text(
+                                          'License No: 123456789',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12),
+                                        )
+                                      ],
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          '369',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20,
+                                              color: Colors.white),
+                                        ),
+                                        Text(
+                                          'Ride',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 14),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 12),
+                                Row(
+                                  children: [
+                                    Text(
+                                      '5.0',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16),
+                                    ),
+                                    SizedBox(width: 10),
+                                    Icon(Icons.star,
+                                        color: Colors.white, size: 16),
+                                    Icon(Icons.star,
+                                        color: Colors.white, size: 16),
+                                    Icon(Icons.star,
+                                        color: Colors.white, size: 16),
+                                    Icon(Icons.star,
+                                        color: Colors.white, size: 16),
+                                    Icon(Icons.star,
+                                        color: Colors.white, size: 16),
+                                  ],
+                                )
+                              ],
+                            ))
+                          ],
+                        )
                       ],
                     ),
                   ),
