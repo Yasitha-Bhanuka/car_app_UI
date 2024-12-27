@@ -1,6 +1,7 @@
 import 'package:car_app/common/card_list.dart';
 import 'package:car_app/constants.dart';
 import 'package:car_app/model/car.dart';
+import 'package:car_app/screens/detail/car_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class CarHomeScreen extends StatelessWidget {
@@ -35,7 +36,11 @@ class CarHomeScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final car = carList[index];
           return GestureDetector(
-            onTap: () {},
+            onTap: () {
+              // for navigating
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CarDetailScreen()));
+            },
             child: Container(
               margin: EdgeInsets.only(bottom: 20),
               child: Stack(
