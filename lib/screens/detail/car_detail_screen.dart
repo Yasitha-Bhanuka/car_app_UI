@@ -36,6 +36,10 @@ class CarDetailScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         CarInformation(),
+                        Divider(
+                          height: 15,
+                          color: Colors.white70,
+                        ),
                       ],
                     ),
                   ),
