@@ -113,11 +113,46 @@ class CarDetailScreen extends StatelessWidget {
                                     Icon(Icons.star,
                                         color: Colors.white, size: 16),
                                   ],
+                                ),
+                                SizedBox(height: 12),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.symmetric(
+                                          vertical: 10, horizontal: 20),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: cardColor,
+                                      ),
+                                      child: Text(
+                                        "Call",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.symmetric(
+                                          vertical: 10, horizontal: 20),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: cardColor,
+                                      ),
+                                      child: Text(
+                                        "Book Now",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ],
                                 )
                               ],
                             ))
                           ],
-                        )
+                        ),
                       ],
                     ),
                   ),
