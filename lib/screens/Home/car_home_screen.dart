@@ -36,6 +36,7 @@ class CarHomeScreen extends StatelessWidget {
           return GestureDetector(
             onTap: () {},
             child: Container(
+              margin: EdgeInsets.only(bottom: 20),
               child: Stack(
                 children: [
                   Container(
@@ -48,6 +49,7 @@ class CarHomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           "\$${car.price.toString()}",
@@ -56,9 +58,18 @@ class CarHomeScreen extends StatelessWidget {
                               fontSize: 25,
                               fontWeight: FontWeight.bold),
                         ),
+                        Text(
+                          "price/hr",
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        )
                       ],
                     ),
-                  )
+                  ),
+                  Positioned(
+                    right: 30,
+                    child: Image.asset(car.image, width: 160, height: 160),
+                  ),
                 ],
               ),
             ),
