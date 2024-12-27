@@ -13,7 +13,7 @@ class CarDetailScreen extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            "assets/images/map.png",
+            "assets/images/map.jpg",
             fit: BoxFit.cover,
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
@@ -34,30 +34,8 @@ class CarDetailScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "\$${car.price.toString()}",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "price/hr",
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(height: 15),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            CarItems(name: "Brand", value: car.brand),
-                            CarItems(name: "Model No", value: car.model),
-                            CarItems(name: "CO2", value: car.co2),
-                            CarItems(name: "Fuel Cons", value: car.fuelCons),
-                          ],
-                        ),
+                        CarInformation(),
                       ],
                     ),
                   ),
@@ -72,6 +50,49 @@ class CarDetailScreen extends StatelessWidget {
               ))
         ],
       ),
+    );
+  }
+
+  Column CarInformation() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "\$${car.price.toString()}",
+          style: TextStyle(
+              color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+        ),
+        Text(
+          "price/hr",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        SizedBox(height: 15),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            CarItems(
+              name: "Brand",
+              value: car.brand,
+              textColor: Colors.black,
+            ),
+            CarItems(
+              name: "Model No",
+              value: car.model,
+              textColor: Colors.black,
+            ),
+            CarItems(
+              name: "CO2",
+              value: car.co2,
+              textColor: Colors.black,
+            ),
+            CarItems(
+              name: "Fuel Cons",
+              value: car.fuelCons,
+              textColor: Colors.black,
+            ),
+          ],
+        ),
+      ],
     );
   }
 

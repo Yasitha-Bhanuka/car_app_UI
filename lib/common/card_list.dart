@@ -23,7 +23,7 @@ class CarItems extends StatelessWidget {
         Text(
           name,
           style: TextStyle(
-              color: textColor, fontSize: 12, fontWeight: FontWeight.normal),
+              color: textColor, fontSize: 12, fontWeight: FontWeight.bold),
         ),
       ],
     );
