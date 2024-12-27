@@ -27,6 +27,41 @@ class CarHomeScreen extends StatelessWidget {
           SizedBox(width: 20)
         ],
       ),
+      body: ListView.builder(
+        shrinkWrap: true,
+        itemCount: 6,
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: () {},
+            child: Container(
+              child: Stack(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.only(
+                        left: 25, top: 10, right: 20, bottom: 15),
+                    decoration: BoxDecoration(
+                      color: cardColor,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          'Car Name',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }
