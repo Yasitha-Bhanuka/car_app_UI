@@ -1,4 +1,5 @@
 import 'package:car_app/screens/Home/car_home_screen.dart';
+import 'package:car_app/screens/Home/detail/car_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CarHomeScreen(),
+      // home: CarHomeScreen(),
+      home: CarDetailScreen(),
     );
   }
 }
