@@ -9,12 +9,23 @@ class CarHomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Available Car',
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),
         ),
         backgroundColor: backgroundColor,
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.menu,
+              color: Colors.white,
+            ),
+            onPressed: () {},
+          ),
+          SizedBox(width: 20)
+        ],
       ),
     );
   }
