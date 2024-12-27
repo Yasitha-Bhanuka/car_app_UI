@@ -31,7 +31,7 @@ class CarHomeScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         shrinkWrap: true,
-        itemCount: 1,
+        itemCount: carList.length,
         itemBuilder: (context, index) {
           final car = carList[index];
           return GestureDetector(

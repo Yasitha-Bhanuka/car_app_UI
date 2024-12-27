@@ -18,7 +18,7 @@ class Car {
 
 List<Car> carList = [
   Car('assets/images/bentley.png', 120, 'Bentley', '3A 9200', '77/km', '5,5 L'),
-  Car('assets/images/rolls_roys.png', 185, 'RR', '3A 9200', '77/km', '5,5 L'),
+  Car('assets/images/rolls_royce.png', 185, 'RR', '3A 9200', '77/km', '5,5 L'),
   Car('assets/images/mercedes.png', 100, 'Mercedes', '3A 9200', '77/km',
       '5,5 L'),
   Car('assets/images/audi.png', 90, 'Audi', '3A 9200', '77/km', '5,5 L'),
