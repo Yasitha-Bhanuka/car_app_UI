@@ -88,7 +88,9 @@ class CarHomeScreen extends StatelessWidget {
                   ),
                   Positioned(
                     right: 30,
-                    child: Image.asset(car.image, width: 200, height: 120),
+                    child: Hero(
+                        tag: car.image,
+                        child: Image.asset(car.image, width: 200, height: 120)),
                   ),
                 ],
               ),
