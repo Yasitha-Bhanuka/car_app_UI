@@ -1,4 +1,5 @@
 import 'package:car_app/constants.dart';
+import 'package:car_app/model/car.dart';
 import 'package:flutter/material.dart';
 
 class CarHomeScreen extends StatelessWidget {
@@ -29,8 +30,9 @@ class CarHomeScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         shrinkWrap: true,
-        itemCount: 6,
+        itemCount: 1,
         itemBuilder: (context, index) {
+          final car = carList[index];
           return GestureDetector(
             onTap: () {},
             child: Container(
@@ -38,6 +40,7 @@ class CarHomeScreen extends StatelessWidget {
                 children: [
                   Container(
                     width: double.infinity,
+                    margin: EdgeInsets.only(left: 24, right: 24, top: 50),
                     padding: EdgeInsets.only(
                         left: 25, top: 10, right: 20, bottom: 15),
                     decoration: BoxDecoration(
@@ -47,10 +50,10 @@ class CarHomeScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          'Car Name',
+                          "\$${car.price.toString()}",
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 25,
                               fontWeight: FontWeight.bold),
                         ),
                       ],
