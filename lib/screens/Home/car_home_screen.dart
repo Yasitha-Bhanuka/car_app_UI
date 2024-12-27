@@ -38,8 +38,12 @@ class CarHomeScreen extends StatelessWidget {
           return GestureDetector(
             onTap: () {
               // for navigating
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => CarDetailScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CarDetailScreen(
+                            car: car,
+                          )));
             },
             child: Container(
               margin: EdgeInsets.only(bottom: 20),
