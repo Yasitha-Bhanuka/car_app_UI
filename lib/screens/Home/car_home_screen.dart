@@ -1,3 +1,4 @@
+import 'package:car_app/common/card_list.dart';
 import 'package:car_app/constants.dart';
 import 'package:car_app/model/car.dart';
 import 'package:flutter/material.dart';
@@ -67,82 +68,10 @@ class CarHomeScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  car.brand,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                                Text(
-                                  "Brand",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  car.model,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                                Text(
-                                  "Model No",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  car.co2,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                                Text(
-                                  "CO2",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  car.fuelCons,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                                Text(
-                                  "Fuel Cons",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal),
-                                ),
-                              ],
-                            ),
+                            CarItems(name: "Brand", value: car.brand),
+                            CarItems(name: "Model No", value: car.model),
+                            CarItems(name: "CO2", value: car.co2),
+                            CarItems(name: "Fuel Cons", value: car.fuelCons),
                           ],
                         ),
                       ],
